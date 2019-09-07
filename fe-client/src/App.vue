@@ -8,19 +8,7 @@
     </v-app-bar>
 
     <v-content>
-      <v-container
-        class=""
-        fluid
-      >
-        <v-row
-          align="left"
-          justify="top"
-        >
-          <v-col class="shrink">
-            <router-view/>
-          </v-col>
-        </v-row>
-      </v-container>
+      <router-view/>
     </v-content>
 
     <v-footer app>
