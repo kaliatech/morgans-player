@@ -3,7 +3,8 @@
     <v-row>
       <v-col>
         <h3>
-          {{ playlistName }} <span v-if="selectedS3Obj"> - {{ selectedS3Obj.key }}</span>
+          <span v-if="selectedS3Obj">{{ selectedS3Obj.title }}</span>
+          <span v-else>{{ playlistName }}</span>
         </h3>
       </v-col>
     </v-row>
@@ -203,6 +204,7 @@ export default {
 
   .media-player {
     width: 100%;
+    outline: none;
   }
 
   .playlist-audio-only {
