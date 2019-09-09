@@ -63,3 +63,5 @@ typings/
 # intellij files (optional, sometimes okay to add)
 *.iml
 .idea
+
+working

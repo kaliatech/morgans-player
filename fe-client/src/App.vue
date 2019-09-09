@@ -1,14 +1,14 @@
 <template>
-  <v-app id="inspire">
+  <v-app id="morgans-player">
     <v-app-bar
       app
       clipped-left
     >
-      <v-toolbar-title>Morgan's Player</v-toolbar-title>
+      <v-toolbar-title>{{ title }}</v-toolbar-title>
     </v-app-bar>
 
     <v-content>
-      <router-view/>
+      <router-view @title-change="onTitleChange"/>
     </v-content>
 
     <v-footer app>
@@ -21,9 +21,16 @@
 export default {
   name: 'App',
   components: {},
-  data: () => ({}),
+  data: () => ({
+    title: 'Morgan\'s Player'
+  }),
   created () {
     this.$vuetify.theme.dark = true
+  },
+  methods: {
+    onTitleChange (newTitle) {
+      this.title = newTitle
+    }
   }
 }
 </script>
