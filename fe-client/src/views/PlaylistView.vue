@@ -187,7 +187,7 @@ export default {
       }
     },
     formatFilesize (size) {
-      return filesize(size, {round: 1})
+      return filesize(size, { round: 1 })
     }
   }
 }
