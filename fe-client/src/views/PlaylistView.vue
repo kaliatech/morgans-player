@@ -126,6 +126,10 @@ export default {
   // },
   watch: {
     selectedS3Obj: function (newVal, oldVal) {
+      if (this.mediaPlayer) {
+        this.mediaPlayer.pause()
+      }
+
       this.$nextTick(() => {
         if (!this.$refs) {
           return
